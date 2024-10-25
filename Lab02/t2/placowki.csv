@@ -1,0 +1,56 @@
+ID_placowki,Adres_placowki,Is_centrum_dystrybucyjne
+0,aleja Rzeczna 07 87-038 Radom,False
+0,plac Stolarska 960 65-569 Chojnice,False
+0,al. Poziomkowa 54/01 44-077 Żywiec,False
+0,al. Wiązowa 76/34 60-807 Jelenia Góra,False
+0,ul. Złota 758 87-736 Września,False
+0,ulica Orla 108 62-673 Ostrołęka,False
+0,aleja Nowa 55/83 77-001 Iława,False
+0,al. Spółdzielcza 953 64-534 Chojnice,False
+0,al. Chabrowa 45/07 05-043 Ostrów Mazowiecka,False
+0,ul. Podleśna 946 79-445 Koszalin,False
+10,al. Cegielniana 88 65-978 Ostrów Mazowiecka,True
+20,aleja Letnia 10 32-303 Krotoszyn,True
+30,al. Nałkowskiej 88/86 19-785 Śrem,True
+40,plac Plażowa 14 12-787 Wałbrzych,True
+50,ul. Willowa 894 47-540 Białogard,True
+60,aleja Krucza 57 25-840 Wodzisław Śląski,True
+70,al. Moniuszki 415 86-375 Bydgoszcz,True
+80,pl. Sosnowa 02/66 13-112 Żory,True
+90,ul. Kusocińskiego 602 17-506 Dąbrowa Górnicza,True
+100,aleja Malczewskiego 072 91-704 Poznań,True
+20,pl. Ludowa 86/33 50-606 Wejherowo,False
+20,ulica Jodłowa 572 52-846 Starogard Gdański,False
+20,al. Rubinowa 33/71 58-429 Żagań,False
+20,plac Bursztynowa 01 76-956 Piotrków Trybunalski,False
+20,pl. Wiosenna 80/93 49-242 Rybnik,False
+20,pl. Wiejska 97 09-933 Nowy Dwór Mazowiecki,False
+20,al. Łąkowa 23 37-086 Nowy Sącz,False
+20,al. Sosnowa 21 18-223 Przemyśl,False
+20,ul. Żurawia 74 44-955 Zawiercie,False
+20,ulica Ciasna 319 27-601 Bełchatów,False
+20,ul. Letnia 76/52 20-940 Stalowa Wola,False
+20,pl. Pogodna 22 89-110 Poznań,False
+20,aleja Andersa 55 55-595 Chorzów,False
+20,pl. Głowackiego 59/13 11-661 Grodzisk Mazowiecki,False
+20,ulica Malinowa 980 41-786 Kościan,False
+20,aleja Słowackiego 38/46 51-570 Wyszków,False
+20,ul. Kopernika 605 73-083 Starogard Gdański,False
+20,ulica Prosta 216 99-471 Biała Podlaska,False
+20,ul. Perłowa 23 55-803 Bytom,False
+20,aleja Rolna 61/47 88-625 Lubartów,False
+40,ul. Kolonia 16/92 19-583 Toruń,True
+60,plac Spacerowa 40 05-218 Żory,True
+80,plac Nowa 32/80 21-491 Nowa Ruda,True
+100,aleja Brzechwy 20/10 04-315 Ostróda,True
+120,aleja Pomorska 20/74 40-903 Gniezno,True
+140,ulica Spokojna 30/86 31-215 Bartoszyce,True
+160,al. Tuwima 99 38-960 Kołobrzeg,True
+180,ulica Daleka 82 37-800 Augustów,True
+200,ulica Akacjowa 51 98-577 Nowy Dwór Mazowiecki,True
+220,ulica Lelewela 735 74-110 Sieradz,True
+240,ulica Wypoczynkowa 81/53 55-984 Zakopane,True
+260,ulica Kruczkowskiego 83 47-544 Zabrze,True
+280,pl. Ludowa 140 52-458 Piaseczno,True
+300,aleja Turystyczna 33/66 20-232 Będzin,True
+320,aleja Szeroka 363 80-993 Gdynia,True
