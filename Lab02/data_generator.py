@@ -325,4 +325,4 @@ if __name__ == "__main__":
     export_to_csv(zlecenia,'./t2','zlecenia.csv')
     export_to_csv(transportyzlecenia,'./t2','transportyzlecenia.csv')
     export_to_csv(DzC,'./t2','DzC.csv')
-    export_to_csv(DoA,'./t1','DoA.csv')
+    export_to_csv(DoA,'./t2','DoA.csv')
