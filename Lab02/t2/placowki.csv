@@ -1,27 +1,26 @@
-ID_placowki,Adres_placowki,Is_centrum_dystrybucyjne
-0,aleja Rzeczna 07 87-038 Radom,False
-1,plac Stolarska 960 65-569 Chojnice,False
-2,al. Poziomkowa 54/01 44-077 Żywiec,False
-3,al. Wiązowa 76/34 60-807 Jelenia Góra,False
-4,ul. Złota 758 87-736 Września,False
-5,ulica Orla 108 62-673 Ostrołęka,False
-6,aleja Nowa 55/83 77-001 Iława,False
-7,al. Spółdzielcza 953 64-534 Chojnice,False
-8,al. Chabrowa 45/07 05-043 Ostrów Mazowiecka,False
-9,ul. Podleśna 946 79-445 Koszalin,False
-10,al. Cegielniana 88 65-978 Ostrów Mazowiecka,True
-11,aleja Letnia 10 32-303 Krotoszyn,True
-12,al. Nałkowskiej 88/86 19-785 Śrem,True
-13,plac Plażowa 14 12-787 Wałbrzych,True
-14,ul. Willowa 894 47-540 Białogard,True
-15,aleja Krucza 57 25-840 Wodzisław Śląski,True
-16,al. Moniuszki 415 86-375 Bydgoszcz,True
-17,pl. Sosnowa 02/66 13-112 Żory,True
-18,ul. Kusocińskiego 602 17-506 Dąbrowa Górnicza,True
-19,aleja Malczewskiego 072 91-704 Poznań,True
-20,pl. Ludowa 86/33 50-606 Wejherowo,False
-21,ulica Jodłowa 572 52-846 Starogard Gdański,False
-22,al. Rubinowa 33/71 58-429 Żagań,False
-23,plac Bursztynowa 01 76-956 Piotrków Trybunalski,False
-24,pl. Wiosenna 80/93 49-242 Rybnik,False
-25,pl. Wiejska 97 09-933 Nowy Dwór Mazowiecki,True
+0,ul. Cicha 70 07-656 Kościerzyna,0
+1,plac Stolarska 960 65-569 Chojnice,0
+2,al. Poziomkowa 54/01 44-077 Żywiec,0
+3,al. Wiązowa 76/34 60-807 Jelenia Góra,0
+4,ul. Złota 758 87-736 Września,0
+5,ulica Orla 108 62-673 Ostrołęka,0
+6,aleja Nowa 55/83 77-001 Iława,0
+7,al. Spółdzielcza 953 64-534 Chojnice,0
+8,al. Chabrowa 45/07 05-043 Ostrów Mazowiecka,0
+9,ul. Podleśna 946 79-445 Koszalin,0
+10,al. Cegielniana 88 65-978 Ostrów Mazowiecka,1
+11,aleja Letnia 10 32-303 Krotoszyn,1
+12,al. Nałkowskiej 88/86 19-785 Śrem,1
+13,plac Plażowa 14 12-787 Wałbrzych,1
+14,ul. Willowa 894 47-540 Białogard,1
+15,aleja Krucza 57 25-840 Wodzisław Śląski,1
+16,al. Moniuszki 415 86-375 Bydgoszcz,1
+17,pl. Sosnowa 02/66 13-112 Żory,1
+18,ul. Kusocińskiego 602 17-506 Dąbrowa Górnicza,1
+19,aleja Malczewskiego 072 91-704 Poznań,1
+20,pl. Ludowa 86/33 50-606 Wejherowo,0
+21,ulica Jodłowa 572 52-846 Starogard Gdański,0
+22,al. Rubinowa 33/71 58-429 Żagań,0
+23,plac Bursztynowa 01 76-956 Piotrków Trybunalski,0
+24,pl. Wiosenna 80/93 49-242 Rybnik,0
+25,pl. Wiejska 97 09-933 Nowy Dwór Mazowiecki,1
