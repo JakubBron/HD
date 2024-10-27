@@ -23,6 +23,7 @@ timeEndDate_T2 = datetime.datetime(2025, 8, 10)
 fuelTypesList = ['ON', 'PB95', 'LPG']
 maxMalfunctionsPerTruck = 5
 maxUpdated = 5
+nullValue = ''
 
 # setting RNGs
 Faker.seed(our_seed)
@@ -51,12 +52,12 @@ def generate_placowki(number_pno, number_dyst, id_placowki=0):
     dict_placowki = []
     for i in range(number_pno):
         address = faker.address().replace('\n', ' ')
-        dict_placowki.append({'ID_placowki': id_placowki, 'Adres_placowki': address, 'Is_centrum_dystrybucyjne': False})
+        dict_placowki.append({'ID_placowki': id_placowki, 'Adres_placowki': address, 'Is_centrum_dystrybucyjne': 0})
         id_placowki += 1
 
     for i in range(number_dyst):
         address = faker.address().replace('\n', ' ')
-        dict_placowki.append({'ID_placowki': id_placowki, 'Adres_placowki': address, 'Is_centrum_dystrybucyjne': True})
+        dict_placowki.append({'ID_placowki': id_placowki, 'Adres_placowki': address, 'Is_centrum_dystrybucyjne': 1})
         id_placowki += 1
     
     return dict_placowki, id_placowki
@@ -65,7 +66,7 @@ def generate_statusy():
     id_statusu = 4
     dict_statusy = [
         {'ID_statusu': 0, 'Opis_statusu': 'Przyjęte'},
-        {'ID_statusu': 1, 'Opis_statusu': 'W trakcie realizacji'},
+        {'ID_statusu': 1, 'Opis_statusu': 'W realizacji'},
         {'ID_statusu': 2, 'Opis_statusu': 'Zakończone'},
         {'ID_statusu': 3, 'Opis_statusu': 'Anulowane'}
     ]
@@ -74,7 +75,7 @@ def generate_statusy():
 def generate_zlecenia(number, dict_placowki, dict_gabaryty, dict_statusy, id_zlecenia=0):
     zlecenia = []
     for i in range(number):
-        phone_number = f'+48{faker.msisdn()[3:]}'
+        phone_number = f'+48{faker.msisdn()[4:]}'
         nazwa_zamawiajacego = ''
         if random.random() <= chance_companyPerson:
             nazwa_zamawiajacego = faker.name()[:zlecenia_maxTextLen]
@@ -82,15 +83,15 @@ def generate_zlecenia(number, dict_placowki, dict_gabaryty, dict_statusy, id_zle
             nazwa_zamawiajacego = faker.company()[:zlecenia_maxTextLen]
 
         all_pno_from_dict = set([x['ID_placowki'] for x in dict_placowki])
-        adres_nadania = 'NULL'
-        punkt_nadania = 'NULL'
+        adres_nadania = nullValue
+        punkt_nadania = nullValue
         if random.random() <= chance_pno:
             punkt_nadania = all_pno_from_dict.pop()
         else:
             adres_nadania = faker.address().replace('\n', ' ')
 
-        adres_odbioru = 'NULL'
-        punkt_odbioru = 'NULL'
+        adres_odbioru = nullValue
+        punkt_odbioru = nullValue
         if random.random() <= chance_pno:
             punkt_odbioru = all_pno_from_dict.pop()
         else:
@@ -138,7 +139,7 @@ def generate_transportyzlecenia(placowki, zlecenia, statusy, id_zlecenia=0, id_t
         data_poczatek = datetime.datetime.strptime(zlecenia[i]['Data_przyjecia'], '%Y-%m-%d')
         end_date = datetime.datetime.strptime(zlecenia[i]['Data_zakoczenia'], '%Y-%m-%d')
         data_koniec = faker.date_between(start_date=data_poczatek, end_date=end_date)
-        skad = 'NULL'
+        skad = nullValue
         placowki_dystr_id = set([x['ID_placowki'] for x in placowki if x['Is_centrum_dystrybucyjne']])
         dokad = random.choice(list(placowki_dystr_id))
         placowki_dystr_id.remove(dokad)
@@ -177,7 +178,7 @@ def generate_transportyzlecenia(placowki, zlecenia, statusy, id_zlecenia=0, id_t
         data_poczatek = data_koniec
         data_koniec = end_date
         skad = dokad
-        dokad = 'NULL'
+        dokad = nullValue
         transportyzlecenia.append({
             'ID_zlecenia': i,
             'ID_transportu': id_transportu,
@@ -234,11 +235,12 @@ def generate_DzC_and_DoA(transportyzlecenia, number_of_trucks, id_transportu=0):
 
     return DzC, DoA
 
-def export_to_csv(data, path, filename):
+def export_to_csv(data, path, filename, write_header=False):
         keys = data[0].keys()
         with open(f'{path}/{filename}', 'w', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=keys)
-            writer.writeheader()
+            if write_header:
+                writer.writeheader()
             writer.writerows(data)
 
 ############################################################
@@ -279,8 +281,8 @@ if __name__ == "__main__":
     export_to_csv(statusy,'./t1','statusy.csv')
     export_to_csv(zlecenia,'./t1','zlecenia.csv')
     export_to_csv(transportyzlecenia,'./t1','transportyzlecenia.csv')
-    export_to_csv(DzC,'./t1','DzC.csv')
-    export_to_csv(DoA,'./t1','DoA.csv')
+    export_to_csv(DzC,'./t1','DzC.csv', True)
+    export_to_csv(DoA,'./t1','DoA.csv', True)
 
 
     # generating in t2 time moment
@@ -324,5 +326,5 @@ if __name__ == "__main__":
     export_to_csv(statusy,'./t2','statusy.csv')
     export_to_csv(zlecenia,'./t2','zlecenia.csv')
     export_to_csv(transportyzlecenia,'./t2','transportyzlecenia.csv')
-    export_to_csv(DzC,'./t2','DzC.csv')
-    export_to_csv(DoA,'./t2','DoA.csv')
+    export_to_csv(DzC,'./t2','DzC.csv', True)
+    export_to_csv(DoA,'./t2','DoA.csv', True)
